@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>vueguide</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="show = !show">Toggle</button>
+        <p>{{msg}}</p>
+        <transition name="fade">
+            <p v-if="show">{{ msg }}</p>
+        </transition>
+    </div>
+    <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+    <script type="text/ecmascript-6">
+        import Vue from 'vue';
+        new Vue({
+            el: '#app',
+            data: {
+                show: true,
+                msg: "good morning"
+            }
+        })
+    </script>
+    <!--<script src="/dist/build.js"></script>-->
+</body>
+
+</html>
